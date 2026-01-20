@@ -1,7 +1,6 @@
-Perfect 👍
-Then **start with Chapter 1 only**.
 
-## **Chapter 1: Variables & Data Types — Topics Only**
+
+### Variables & Data Types — Topics Only**
 
 * `var`, `let`, `const`
 * Variable declaration vs initialization
