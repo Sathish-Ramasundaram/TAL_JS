@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Type Coercion Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    pre {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      color: #e6db74;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    blockquote {
+      background: #eef;
+      padding: 10px;
+      border-left: 5px solid #88f;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📌 What is Type Coercion?</h1>
+  <blockquote>
+    <strong>Type coercion</strong> is when JavaScript <strong>automatically converts one data type into another</strong> during an operation.
+  </blockquote>
+  <p>JavaScript does this so your code can keep running instead of throwing errors.</p>
+
+  <hr>
+
+  <h2>🔹 Example 1: Number + String</h2>
+  <pre><code>let result = 5 + "5";
+console.log(result);</code></pre>
+  <p><strong>Output:</strong> "55"</p>
+  <ul>
+    <li>"5" is a string</li>
+    <li>+ prefers string concatenation</li>
+    <li>JavaScript converts 5 → "5"</li>
+  </ul>
+  <p>✔️ This is <strong>implicit type coercion</strong></p>
+
+  <h2>🔹 Example 2: String converted to Number</h2>
+  <pre><code>let result = "10" - 2;
+console.log(result);</code></pre>
+  <p><strong>Output:</strong> 8</p>
+  <ul>
+    <li>- works only with numbers</li>
+    <li>JavaScript converts "10" → 10</li>
+  </ul>
+
+  <h2>🔹 Example 3: Boolean Coercion</h2>
+  <pre><code>console.log(true + 1);
+console.log(false + 1);</code></pre>
+  <p><strong>Output:</strong><br>2<br>1</p>
+  <ul>
+    <li>true → 1</li>
+    <li>false → 0</li>
+  </ul>
+
+  <h2>🔹 Example 4: Comparison (==)</h2>
+  <pre><code>console.log(5 == "5");   // true
+console.log(5 === "5"); // false</code></pre>
+  <ul>
+    <li>== performs type coercion ("5" → 5)</li>
+    <li>=== does <strong>no coercion</strong> (strict equality)</li>
+  </ul>
+
+  <h2>🔹 Example 5: Truthy and Falsy Values</h2>
+  <pre><code>if ("") console.log("Runs");
+if ("hello") console.log("Runs");</code></pre>
+  <p><strong>Output:</strong><br>Runs</p>
+  <ul>
+    <li>"" → falsy</li>
+    <li>"hello" → truthy</li>
+  </ul>
+
+  <h2>🧠 Common Coercion Rules</h2>
+  <table>
+    <tr><th>Expression</th><th>Result</th><th>Reason</th></tr>
+    <tr><td>"5" + 1</td><td>"51"</td><td>String wins</td></tr>
+    <tr><td>"5" - 1</td><td>4</td><td>Converted to number</td></tr>
+    <tr><td>true + 1</td><td>2</td><td>true → 1</td></tr>
+    <tr><td>false + 1</td><td>1</td><td>false → 0</td></tr>
+    <tr><td>null + 1</td><td>1</td><td>null → 0</td></tr>
+    <tr><td>undefined + 1</td><td>NaN</td><td>Invalid number</td></tr>
+  </table>
+
+  <h2>⚠️ Why Type Coercion is Dangerous</h2>
+  <pre><code>console.log([] == false); // true 😵
+console.log("" == 0);     // true</code></pre>
+  <p>These happen because of <strong>complex coercion rules</strong>.</p>
+
+  <h2>✅ Best Practice</h2>
+  <p>✔️ Prefer <strong>explicit conversion</strong>:</p>
+  <pre><code>Number("5");   // 5
+String(5);     // "5"
+Boolean(1);    // true</code></pre>
+  <p>✔️ Use <code>===</code> instead of <code>==</code></p>
+
+  <h2>🧠 One-line takeaway</h2>
+  <blockquote>
+    <strong>Type coercion is JavaScript changing types automatically — sometimes helpful, sometimes dangerous.</strong>
+  </blockquote>
+
+</body>
+</html>

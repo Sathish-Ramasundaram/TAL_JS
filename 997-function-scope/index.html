@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Function Scope Example</title>
+  </head>
+  <body>
+
+    <button onclick="showMessage()">Click Me</button>
+
+    <script>
+
+    var message_outside = "Hello from global scope!";
+    console.log(message_outside); // ✅ Works
+    console.log(message); // ❌ Error: message is not defined
+
+      function showMessage() {
+        var message = "Hello from function scope!";
+
+        console.log(message); // ✅ Works
+        console.log(message_outside); // ✅ Works
+      }
+
+      
+    </script>
+
+  </body>
+</html>

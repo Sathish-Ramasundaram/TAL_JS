@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Value vs Reference</title>
+</head>
+<body>
+  <h2>Value vs Reference (JavaScript)</h2>
+
+  <p>
+    This is the code <br>
+    <code>
+          let a = 10; <br>
+          let b = a; <br>
+          b = 20; <br>
+    </code>
+  </p>
+
+  <p>
+    <code>
+        function referenceExample() { <br>
+            const page1 = { title: "JS." };<br>
+            const page2 = page1;<br>
+
+            page2.title = "JavaScript";<br>
+        }
+    </code>
+  </p>
+
+  <button onclick="valueExample()">Value Example</button>
+  
+  <button onclick="referenceExample()">Reference Example</button>
+
+  <pre id="output"></pre>
+
+  <script src="script.js"></script>
+</body>
+</html>
