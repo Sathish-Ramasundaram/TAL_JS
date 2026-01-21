@@ -29,6 +29,9 @@ Covers foundational topics:
 Covers decision-making logic:
 - `001-if-else` — Conditional branching
 - `002-switch` — Multi-path control with switch-case
+
+## Newly added 21-January
+
 - `003-for` — `for` loop basics with examples
 - `004-while` — `while` loop and use cases
 - `005-do-while` — `do...while` loop behavior
