@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scope Demo</title>
+</head>
+<body>
+  <h1>Scope Examples</h1>
+  <p>Open your browser console to see the outputs.</p>
+
+  <script>
+    // 🧠 Scope means: where a variable can be accessed.
+
+    // 1️⃣ Global Scope
+    let message = "Hello";
+
+    function sayMessage() {
+      console.log(message);
+    }
+
+    sayMessage();       // Output: Hello
+    console.log(message); // Output: Hello
+
+    // 2️⃣ Function Scope
+    function test() {
+      let number = 10;
+      console.log(number); // Output: 10
+    }
+
+    test();
+    // console.log(number); // ❌ ReferenceError: number is not defined
+
+    // 3️⃣ Block Scope (let / const)
+    if (true) {
+      let age = 30;
+      console.log(age); // Output: 30
+    }
+    // console.log(age); // ❌ ReferenceError: age is not defined
+
+    // 🧠 Important comparison: var vs let
+
+    // var is NOT block scoped
+    if (true) {
+      var x = 5;
+    }
+    console.log(x); // ✅ works → Output: 5
+
+    // let IS block scoped
+    if (true) {
+      let y = 5;
+      console.log(y); // Output: 5
+    }
+    // console.log(y); // ❌ ReferenceError: y is not defined
+
+    // 🧠 Visual mental model
+    // Global scope → city
+    // Function scope → house
+    // Block scope → room
+  </script>
+</body>
+</html>

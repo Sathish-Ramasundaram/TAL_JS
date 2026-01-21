@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrow Functions Demo</title>
+</head>
+<body>
+  <h1>Arrow Function Examples</h1>
+  <p>Open your browser console to see the outputs.</p>
+
+  <script>
+    // 🧠 Arrow functions are a shorter way to write function expressions.
+
+    // 🔹 Basic syntax
+    // const functionName = () => { ... };
+
+    // 🧩 Step 1: Normal function expression (recap)
+    const sayHelloExpr = function () {
+      console.log("Hello");
+    };
+    sayHelloExpr(); // Output: Hello
+
+    // 🧩 Step 2: Same thing using arrow function
+    const sayHelloArrow = () => {
+      console.log("Hello");
+    };
+    sayHelloArrow(); // Output: Hello
+
+    // 🧩 Step 3: Arrow function with one parameter
+    const greet = (name) => {
+      console.log("Hello", name);
+    };
+    greet("Sathish"); // Output: Hello Sathish
+
+    // 🧩 Step 4: One parameter → parentheses optional
+    const greetOne = name => {
+      console.log("Hello", name);
+    };
+    greetOne("Ravi"); // Output: Hello Ravi
+
+    // 🧩 Step 5: Arrow function with return value
+    const add = (a, b) => {
+      return a + b;
+    };
+    console.log(add(2, 3)); // Output: 5
+
+    // 🧩 Step 6: Implicit return (very important)
+    const addImplicit = (a, b) => a + b;
+    console.log(addImplicit(5, 5)); // Output: 10
+
+    // 🧠 Awareness: Arrow functions do not have their own 'this' and are not hoisted.
+    // We'll cover this later when needed.
+  </script>
+</body>
+</html>

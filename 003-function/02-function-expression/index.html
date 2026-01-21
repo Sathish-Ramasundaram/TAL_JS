@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Function Expression Demo</title>
+</head>
+<body>
+  <h1>Function Expression Examples</h1>
+  <p>Open your browser console to see the outputs.</p>
+
+  <script>
+    // 🧠 What is a Function Expression?
+    // A function created and stored in a variable.
+
+    // 🔹 Basic syntax
+    // const functionName = function () { ... };
+
+    // 🧩 Step 1: Smallest example
+    const sayHello = function () {
+      console.log("Hello");
+    };
+    sayHello(); // Output: Hello
+
+    // 🧩 Step 2: Function expression without name (anonymous)
+    const greet = function () {
+      console.log("Hi");
+    };
+    greet(); // Output: Hi
+
+    // 🧩 Step 3: Function expression is NOT hoisted
+    // This will NOT work:
+    // sayHi(); ❌ Error: Cannot access 'sayHi' before initialization
+    const sayHi = function () {
+      console.log("Hi");
+    };
+    sayHi(); // Works only after definition
+
+    // 🧠 Compare with function declaration
+    // Declaration → hoisted, not stored in variable
+    // Expression → stored in variable, not hoisted
+
+    // 🧠 Real-world analogy
+    // Declaration → Fixed landline (always available)
+    // Expression → Mobile number saved in contact (must save before calling)
+  </script>
+</body>
+</html>

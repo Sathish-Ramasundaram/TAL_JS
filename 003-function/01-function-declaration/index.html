@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Function Declaration Demo</title>
+</head>
+<body>
+  <h1>Function Declaration Examples</h1>
+  <p>Open your browser console to see the outputs.</p>
+
+  <script>
+    // 🧩 Step 1: Smallest possible example
+    function sayHello() {
+      console.log("Hello");
+    }
+    sayHello(); // Output: Hello
+
+    // 🧩 Step 2: Function with simple logic
+    function showNumber() {
+      console.log(5);
+    }
+    showNumber(); // Output: 5
+
+    // 🧩 Step 3: Function reused multiple times
+    function greet() {
+      console.log("Hi");
+    }
+    greet(); // Output: Hi
+    greet(); // Output: Hi
+    greet(); // Output: Hi
+
+    // 🧠 Important rule: Function declaration is hoisted
+    sayHi(); // Works even before declaration
+    function sayHi() {
+      console.log("Hi");
+    }
+
+    // 🧠 What a function declaration is NOT
+    // ❌ It does not run automatically
+    // ❌ It does not need '='
+    // ❌ It does not need 'return' (optional)
+
+    // 🧠 Real-world analogy
+    // Function declaration is like saving a contact.
+    // Calling the function is like calling the contact.
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parameters & Return Values Demo</title>
+</head>
+<body>
+  <h1>Parameters & Return Values Examples</h1>
+  <p>Open your browser console to see the outputs.</p>
+
+  <script>
+    // 🧩 Step 1: Function WITHOUT parameters
+    function sayHello() {
+      console.log("Hello");
+    }
+    sayHello(); // Output: Hello
+
+    // 🧩 Step 2: Function WITH one parameter
+    function greet(name) {
+      console.log("Hello", name);
+    }
+    greet("Sathish"); // Output: Hello Sathish
+    greet("Ravi");    // Output: Hello Ravi
+
+    // 🧩 Step 3: Function WITH multiple parameters
+    function add(a, b) {
+      console.log(a + b);
+    }
+    add(2, 3);   // Output: 5
+    add(5, 10);  // Output: 15
+
+    // 🧠 Return Values
+
+    // 🧩 Step 4: Function that RETURNS a value
+    function addReturn(a, b) {
+      return a + b;
+    }
+    const result = addReturn(2, 3);
+    console.log(result); // Output: 5
+
+    // 🧩 Step 5: `return` stops the function
+    function test() {
+      console.log("Start");
+      return;
+      console.log("End"); // This line never runs
+    }
+    test(); // Output: Start
+
+    // 🧠 Parameter vs Argument
+    function greetAgain(name) {   // parameter
+      console.log(name);
+    }
+    greetAgain("Sathish");        // argument → Output: Sathish
+
+    // 🧠 Real-world analogy (comment only)
+    // Parameter → ingredient
+    // Function → cooking process
+    // Return → cooked food
+  </script>
+</body>
+</html>
