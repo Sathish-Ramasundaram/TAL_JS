@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+            function createTheme() {
+  let theme = "light";
+
+  return function changeTheme() {
+    theme = theme === "light" ? "dark" : "light";
+    console.log(theme);
+  };
+}
+
+const toggleTheme = createTheme();
+
+toggleTheme();
+toggleTheme();
+toggleTheme();
+toggleTheme();
+
+
+
+</script>
+    </body>
+</html>

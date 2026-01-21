@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script>
+
+        // console.log("display a variabl")
+
+        // let x = 10;
+        // console.log(x);
+
+        // console.log("-------------------")
+
+        // console.log("variable insida function")
+
+        // function test() {
+        //     let x = 15;
+        //     console.log(x);
+        // }
+
+        // test();
+
+        // console.log("-------------------")
+
+        // console.log("Inner function using outer variable (no closure)")
+
+        // function outer() {
+        //     let x = 20;
+
+        //     function inner() {
+        //         console.log(x);
+        //     }
+
+        //     inner();
+        // }
+
+        // outer();
+
+        // ---> Next step
+
+        console.log("----------------------")
+
+        function outer() {
+            let x = 1;
+            function inner() {
+                console.log(x);
+            }
+            return inner;
+        }
+
+        
+        const savedInner = outer();
+        savedInner();
+        
+
+
+        </script>
+
+
+    </body>
+</html>

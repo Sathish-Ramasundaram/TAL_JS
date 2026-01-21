@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+            // -- Arrays -- 
+
+            const fruits = ["Apple", "Banana", "Cat"];
+
+            // gives indexes
+
+            for (let index in fruits) {
+                console.log(index);
+            }
+
+            // gives value
+
+            for (let index in fruits) {
+                console.log(fruits[index]);
+            }
+
+            // index + value
+
+            for (let index in fruits) {
+                console.log(index + ":", fruits[index]);
+            }
+
+            console.log("---------------------------")
+
+
+            // --- Object --
+
+            const person = {
+                name: "Sathish",
+                age: 31,
+                city: "Bengaluru"
+            };
+
+            // To get key
+
+            for (let key in person) {
+                console.log(key);
+            }
+
+            // to get value
+
+            for (let key in person) {
+                console.log(person[key]);
+            }
+
+            // to get both key and value
+
+            for (let key in person) {
+                console.log(key + ":", person[key]);
+            }
+
+        </script>
+    </body>
+</html>
