@@ -29,9 +29,6 @@ Covers foundational topics:
 Covers decision-making logic:
 - `001-if-else` — Conditional branching
 - `002-switch` — Multi-path control with switch-case
-
-## Newly added 21-January
-
 - `003-for` — `for` loop basics with examples
 - `004-while` — `while` loop and use cases
 - `005-do-while` — `do...while` loop behavior
@@ -56,5 +53,68 @@ Covers **functions in depth**, from basics to advanced behavior:
 - `06-closures` — Closures explained step by step with real-world examples (theme toggle, to-do, etc.)
 
 ---
+
+## ✅ `004-objects-arrays/`
+
+Hands-on practice with JavaScript reference data structures:
+
+---
+
+## ✅ `005-DOM/`
+
+Covers **core DOM (Document Object Model) concepts** with focused mini demos:
+
+### 📁 `001-Intro-selecting-Elements/`
+
+* Understanding the DOM structure
+* Selecting elements using:
+
+  * `getElementById`
+  * `querySelector`
+  * `querySelectorAll`
+* Difference between single element vs NodeList
+
+---
+
+### 📁 `002-Read-Update-Content/`
+
+* Reading content using `textContent`
+* Updating content dynamically
+* Understanding `innerHTML` and when to avoid it
+* Safe vs unsafe DOM updates
+
+---
+
+### 📁 `004-styling-class/`
+
+* Styling elements using JavaScript
+* Using `classList.add`, `classList.remove`, `classList.toggle`
+* Best practices for class-based styling
+* Basic usage of inline styles via `style`
+
+---
+
+### 📁 `005-Events/`
+
+Demonstrates **event handling** with multiple examples:
+
+* `click.html` — Handling click events
+* `keydown.html` — Keyboard event handling
+* `mouseover.html` — Mouse interaction events
+* Understanding:
+
+  * `addEventListener`
+  * Common DOM events
+  * Event object and `event.target`
+
+---
+
+### 📁 `006-Event-Flow/`
+
+* Understanding how events flow through the DOM
+* Event bubbling (default behavior)
+* Event capturing
+* Using `stopPropagation`
+* Real-world examples showing why bubbling is important
 
 ---
