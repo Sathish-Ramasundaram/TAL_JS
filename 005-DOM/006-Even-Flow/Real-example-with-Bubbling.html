@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Real Time Example With Event Bubbling</h1>
+        <h3>Cart added items</h3>
+        <ul id="cart">
+            <li data-item="iphone">
+                iPhone <button class="remove">Remove</button>
+            </li>
+            <li data-item="headphones">
+                Headphones <button class="remove">Remove</button>
+            </li>
+            <li data-item="laptop">
+                Laptop <button class="remove">Remove</button>
+            </li>
+        </ul>
+
+        <!-- Why this is real-world powerful 🔥
+        ✔ Dynamic items
+        cart.innerHTML += `
+  <li data-item="Tablet">
+    Tablet <button class="remove">Remove</button>
+  </li>
+`; -->
+
+
+No new listeners needed.
+
+        <script>
+            const cart = document.getElementById('cart');
+
+            cart.addEventListener('click', (e) => {
+                if(e.target.classList.contains('remove')) {
+                    const item = e.target.closest("li").dataset.item; // closest ancestor li
+                    console.log(`${item} removed from cart`);
+                    e.target.closest("li").remove();
+                }
+            });
+            
+        </script>
+
+    </body>
+</html>

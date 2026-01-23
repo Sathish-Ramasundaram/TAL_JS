@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Reading & Update Element</h3>
+        <p id="original">This is original Paragraph </p>
+        <button id="updateBtn">Update Paragraph - use textContent</button>
+        <button id="wrongMethod">Wrong Way to update text and style </button>
+        <button id="innerHTMLBtn">Use innerHTML - for text and style </button>
+
+        <script>
+
+            const newPara = document.getElementById('original');
+            newPara.textContent = "This is updated Paragraph";
+
+            const button = document.getElementById('updateBtn');
+            button.addEventListener('click', () => {
+                newPara.textContent = "Paragraph updated after button click!";
+            })
+
+            const wrongButton = document.getElementById('wrongMethod');
+            wrongButton.addEventListener('click', () => {
+                // This is not the correct way to update content
+                newPara.textContent = "<b>This is wrong way to update paragraph with bold! use innerHTML</b>";
+            })
+
+            const innerHTMLButton = document.getElementById('innerHTMLBtn');
+            innerHTMLButton.addEventListener('click', () => {
+                newPara.innerHTML = "<b>This is updated using innerHTML with bold!</b>";
+            })
+
+
+
+        </script>
+
+    </body>
+</html>

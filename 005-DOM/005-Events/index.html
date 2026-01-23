@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Events</h3>
+        <a href="click.html" target="_blank">Click Event</a><br>
+        <a href="mouseover.html" target="_blank">Mouseover Event</a><br>
+        <a href="keydown.html" target="_blank">Keydown Event</a><br>
+
+
+
+        <form id="form">
+            <input placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+
+        <label>
+            Input:
+            <input id="changeInput" type="text" />
+            <p id="changeOutput"></p>
+        </label>
+
+        <label>
+            Search: 
+            <input id="searchInput" type="text" />
+            <p id="searchOutput"></p>
+        </label>
+
+        <br>
+        <br>
+
+        <button id="eventbtn">Event Button </button>
+        <p id="eventOutput"></p>
+
+        <script>
+
+
+            const form = document.getElementById('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();  // stop page refresh
+                alert('Form submitted!');
+            });
+
+            const changeInput = document.getElementById('changeInput');
+            const changeOutput = document.getElementById('changeOutput');
+
+            changeInput.addEventListener('change', () => {
+                console.log("Final value:", changeInput.value);
+                changeOutput.textContent = `Final value: ${changeInput.value}`;
+            });
+
+            const searchInput = document.getElementById('searchInput');
+            const searchOutput = document.getElementById('searchOutput');
+
+            searchInput.addEventListener('input', () => {
+                console.log("Searching value:", searchInput.value);
+                searchOutput.textContent = `You are searching for: ${searchInput.value}`;
+            });
+
+            const eventbtn = document.getElementById('eventbtn');
+            const eventOutput = document.getElementById('eventOutput');
+
+            eventbtn.addEventListener('click', (event) => {
+                console.log("Event Object:", event); // full event object
+
+                eventOutput.innerHTML = `
+                    <strong>Event Type:</strong> ${event.type}<br/>
+                    <strong>Clicked element:</strong> ${event.target.tagName}<br/>
+                    <strong>Mouse X: </strong> ${event.clientX}<br/>
+                    <strong>Mouse Y: </strong> ${event.clientY}
+                    `;
+            });
+
+            eventbtn.addEventListener('click', (e) => {
+                console.log("Event target:", e.target);
+            });
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

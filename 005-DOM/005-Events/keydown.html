@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h3>Keydown Event</h3>
+
+    <input type="text" id="inputField" placeholder="Type something..." />
+    <p id="output"></p>
+
+    <script>
+
+        const inputField = document.getElementById('inputField');
+        const output = document.getElementById('output');
+
+        inputField.addEventListener('keydown', (e) => {
+            output.textContent = `You pressed: ${e.key}`;
+
+        });
+    </script>
+
+</body>
+</html>

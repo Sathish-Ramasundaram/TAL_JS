@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Real Time Example Without Event Bubbling</h1>
+        <h3>Cart added items</h3>
+        <ul>
+            <li id="iphone">
+                iPhone <button id="remove1">Remove</button>
+            </li>
+            <li id="headphones">
+                Headphones <button id="remove2">Remove</button>
+            </li>
+            <li id="laptop">
+                Laptop <button id="remove3">Remove</button>
+            </li>
+        </ul>
+
+        <script>
+            const remove1 = document.getElementById('remove1');
+            const remove2 = document.getElementById('remove2');     
+            const remove3 = document.getElementById('remove3');
+
+            remove1.addEventListener('click', () => {
+                console.log("iphone removed from cart");
+                document.getElementById('iphone').remove();
+            });
+
+            remove2.addEventListener('click', () => {
+                console.log("headphones removed from cart");
+                document.getElementById('headphones').remove();
+            });
+
+            remove3.addEventListener('click', () => {
+                console.log("laptop removed from cart");
+                document.getElementById('laptop').remove();
+            });
+
+        </script>
+
+    </body>
+</html>

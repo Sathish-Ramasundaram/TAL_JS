@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <div id="parent">
+            <button id="child">Click me</button>
+        </div>
+
+
+        <script>
+            parent.addEventListener('click', () => {
+            console.log("Parent bubbling");
+            });
+
+            parent.addEventListener('click', () => {
+                console.log("Parent Capturing");
+            }, 
+            true
+            );
+
+            child.addEventListener('click', () => {
+                console.log("Child Bubbling");
+            });
+        </script>
+    </body>
+</html>

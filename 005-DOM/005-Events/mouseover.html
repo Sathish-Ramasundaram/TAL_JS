@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Mouseover Event</h3>
+
+        <div id="hoverArea" style="width: 200px; height: 200px; background-color: lightblue">
+            When you hover over me, I change color!</div>
+
+        <script>
+
+            const hoverArea = document.getElementById('hoverArea');
+            hoverArea.addEventListener('mouseover', () => {
+                hoverArea.style.background = 'lightgreen';
+            });
+
+        </script>
+
+    </body>
+</html>

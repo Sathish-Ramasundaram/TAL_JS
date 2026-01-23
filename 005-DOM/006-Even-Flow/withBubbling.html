@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="container">
+            <button>one</button>
+            <button>two</button>
+            <button>three</button>
+        </div>
+
+        <script>
+            const container = document.getElementById('container');
+
+            container.addEventListener('click', (event) => {
+                if(event.target.tagName === 'BUTTON') {
+                    console.log(`Button ${event.target.textContent} clicked`);
+                }
+            });
+        </script>
+    </body>
+</html>

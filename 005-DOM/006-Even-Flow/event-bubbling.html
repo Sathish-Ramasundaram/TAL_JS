@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Event Flow</h3>
+        <div id="parent">
+            <div id="child">
+                <button id="grandChild">Click Me</button>
+                <p>Click the button to see event flow in action. Check the console for output.</p>
+            </div>
+        </div>
+
+        <script>
+            const parent = document.getElementById('parent');
+            const child = document.getElementById('child');
+            const grandChild = document.getElementById('grandChild');
+
+            parent.addEventListener('click', () => {
+                console.log('Parent clicked');
+            });
+
+            child.addEventListener('click', () => {
+                console.log('child clicked');
+            });
+
+            grandChild.addEventListener('click', () => {
+                console.log('grandChild clicked');
+            });
+
+        </script>
+    </body>
+</html>

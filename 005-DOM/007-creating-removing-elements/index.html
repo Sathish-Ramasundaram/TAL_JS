@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Creating and Removing Elements</h3>
+
+        <ul id="list">
+            <li id="item1"></li>
+            <li id="item2"></li>
+        </ul>
+    
+        <button id="add">Add item</button>
+        <button id="remove">Remove item </button>
+
+        <script>
+
+            const newPara = document.createElement('p'); // creating new memory element
+            newPara.textContent = "This is a new paragraph created using JavaScript.";
+            document.body.appendChild(newPara);
+
+            const secondPara = document.createElement('p');
+            secondPara.innerHTML = "<b>This is another paragraph created using innerHTML with bold text.</b>";
+            document.body.appendChild(secondPara);
+
+            const list = document.getElementById('list');
+       
+            const listItem1 = document.getElementById('item1'); // already existing li
+            const listItem2 = document.getElementById('item2'); // already existing li
+
+            listItem1.textContent = "Walking";
+            listItem2.textContent = "Running";
+            document.body.appendChild(list);
+
+            const addButton = document.getElementById('add');
+            addButton.addEventListener('click', () => {
+                const newItem = document.createElement('li'); // creating new li element
+                newItem.textContent = "New Item added to the list";
+                list.append(newItem); // adding new li to existing ul
+            })
+
+            // const removeButton = document.getElementById('remove');
+            // removeButton.addEventListener('click', () => {
+
+
+
+
+        </script>
+
+    </body>
+</html>

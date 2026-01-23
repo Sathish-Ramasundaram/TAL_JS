@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Core Concepts Demo</title>
+</head>
+<body>
+  <h1>Open Console to See JavaScript Concepts</h1>
+
+  <script>
+    console.clear();
+
+    // 01 - Variable & Data Types
+    console.log("01 - Variable & Data Types");
+    let name = "Sathish";      // string
+    let age = 25;             // number
+    let isActive = true;      // boolean
+    let nothing = null;       // null
+    let notDefined;           // undefined
+
+    console.log(name, age, isActive, nothing, notDefined);
+
+    // --------------------------------------------------
+
+    // 02 - var, let, const
+    console.log("\n02 - var, let, const");
+
+    var a = 10;
+    let b = 20;
+    const c = 30;
+
+    a = 15;   // allowed
+    b = 25;   // allowed
+    // c = 35; // ❌ not allowed
+
+    console.log(a, b, c);
+
+    // --------------------------------------------------
+
+    // 03 - Variable Declaration vs Initialization
+    console.log("\n03 - Declaration vs Initialization");
+
+    let x;        // declaration
+    x = 100;      // initialization
+
+    console.log(x);
+
+    // --------------------------------------------------
+
+    // 04 - Scope
+    console.log("\n04 - Scope");
+
+    if (true) {
+      var varScoped = "I am var";
+      let letScoped = "I am let";
+    }
+
+    console.log(varScoped); // accessible
+    // console.log(letScoped); // ❌ block scoped
+
+    // --------------------------------------------------
+
+    // 05 - Hoisting
+    console.log("\n05 - Hoisting");
+
+    console.log(hoistedVar); // undefined
+    var hoistedVar = 50;
+
+    // console.log(hoistedLet); // ❌ TDZ
+    let hoistedLet = 60;
+
+    // --------------------------------------------------
+
+    // 06 - Primitive Data Types
+    console.log("\n06 - Primitive Data Types");
+
+    let p1 = 10;
+    let p2 = p1;
+
+    p2 = 20;
+
+    console.log("p1:", p1); // 10
+    console.log("p2:", p2); // 20
+
+    // --------------------------------------------------
+
+    // 07 - Reference (Structure) Types
+    console.log("\n07 - Reference (Structure) Types");
+
+    let obj1 = { color: "white" };
+    let obj2 = obj1;
+
+    obj2.color = "black";
+
+    console.log(obj1.color); // black
+    console.log(obj2.color); // black
+
+    // --------------------------------------------------
+
+    // 08 - typeof Operator
+    console.log("\n08 - typeof Operator");
+
+    console.log(typeof 10);          // number
+    console.log(typeof "hello");     // string
+    console.log(typeof true);        // boolean
+    console.log(typeof undefined);   // undefined
+    console.log(typeof null);        // object (JS bug)
+    console.log(typeof {});          // object
+    console.log(typeof []);          // object
+    console.log(typeof function(){});// function
+
+    // --------------------------------------------------
+
+    // 09 - Mutable vs Immutable
+    console.log("\n09 - Mutable vs Immutable");
+
+    let str = "hello";
+    str[0] = "H"; // ❌ immutable
+
+    console.log(str); // hello
+
+    let arr = [1, 2, 3];
+    arr.push(4); // mutable
+
+    console.log(arr); // [1,2,3,4]
+
+    // --------------------------------------------------
+
+    // 10 - Type Coercion
+    console.log("\n10 - Type Coercion");
+
+    console.log(5 + "5");   // "55"
+    console.log(5 - "2");   // 3
+    console.log(true + 1);  // 2
+    console.log(false + 1); // 1
+
+    // --------------------------------------------------
+
+    // 11 - Equality (Loose vs Strict)
+    console.log("\n11 - Equality (Loose vs Strict)");
+
+    console.log(5 == "5");   // true (loose)
+    console.log(5 === "5");  // false (strict)
+
+    console.log(null == undefined);  // true
+    console.log(null === undefined); // false
+  </script>
+</body>
+</html>

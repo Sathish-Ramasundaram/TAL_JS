@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .box {
+                width: 200px;
+                height: 200px;
+                background: lightgray;
+            }
+
+            .dark {
+                background: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Styling & Classes</h3>
+        <button id="btn">Click For Dark Theme</button>
+        <button id="btnGoBack">Go Back to original Theme</button>
+        <button id="btnToggle">Toggle</button>
+        <div id="box" class="box">Hello</div>
+
+        <script>
+            const button = document.getElementById('btn');
+            const box = document.getElementById('box');
+
+            button.addEventListener('click', () => {
+                box.classList.add('dark'); // This mean <div id="box" class="box dark">Hello</div>
+            });
+
+            const btnGoBack = document.getElementById('btnGoBack');
+            btnGoBack.addEventListener('click', () => {
+                box.classList.remove('dark'); // This mean <div id="box" class="box">Hello</div>
+            });
+
+            const btnToggle = document.getElementById('btnToggle');
+            btnToggle.addEventListener('click', () => {
+                box.classList.toggle('dark'); // This mean if dark class is present remove it otherwise add it
+            });
+
+            // Inline Style
+
+            box.style.border = "2px solid red";
+            // box.style.backgroundColor = "yellow"; inline overrides class style
+
+        </script>
+
+    
+    </body>
+</html>
