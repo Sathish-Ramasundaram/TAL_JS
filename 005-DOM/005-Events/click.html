@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <h3>Click</h3>
+        <h3>Click Event</h3>
         <button id="clickButton">Click Me</button>
         <p id="clickMessage"></p>
 
         <script>
+
             const clickButton = document.getElementById('clickButton');
             const clickMessage = document.getElementById('clickMessage');
 
             clickButton.addEventListener('click', () => {
                 clickMessage.textContent = "Button was clicked!";
+
             });
+
 
         </script>
     </body>

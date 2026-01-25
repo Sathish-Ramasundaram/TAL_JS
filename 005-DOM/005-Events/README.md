@@ -9,7 +9,6 @@ element.addEventListener("eventName", function () {
 });
 
 
-
 ### Click
 
 Example: 

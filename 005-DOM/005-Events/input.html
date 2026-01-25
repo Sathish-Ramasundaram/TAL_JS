@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Input Event</h3>
+
+        <label>
+            Search:
+            <input id="searchInput" type="text" />
+        </label>
+        <p id="searchOutput"></p>
+
+        <script>
+            const searchInput = document.getElementById('searchInput');
+            const searchOutput = document.getElementById('searchOutput');
+
+            searchInput.addEventListener('input', () => {
+                console.log("Searching value:", searchInput.value);
+                searchOutput.textContent = `You searched for: ${searchInput.value}`;
+            });
+        </script>
+
+    </body>
+</html>

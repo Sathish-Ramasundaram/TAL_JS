@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Event Object</h3>
+
+        <button id="eventButton">Click Me</button>
+        <p id="eventInfo"></p>
+
+        <script>
+            const eventButton = document.getElementById('eventButton');
+            const eventInfo = document.getElementById('eventInfo');
+
+            eventButton.addEventListener('click', (event) => {
+                console.log("Event object:", event);
+
+                eventInfo.innerHTML = `
+                    <strong>Event Type:</strong> ${event.type}<br/>
+                    <strong>Clicked Element:</strong> ${event.target.tagName}<br/>
+                    <strong>Mouse X:</strong> ${event.clientX}<br/>
+                    <strong>Mouse Y:</strong> ${event.clientY}
+                `;
+
+            });
+
+            eventButton.addEventListener('click', (e) => {
+                console.log("Event target:", e.target);
+            });
+        </script>
+
+
+    </body>
+</html>

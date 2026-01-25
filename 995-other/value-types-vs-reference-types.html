@@ -23,6 +23,43 @@
             <li>function</li>
         </ul>
         <p>These store a reference to the data, not the data itself.</p>
+        <pre>
+            <code>
+const car = {
+  name: "Toyota",
+  color: "red",
+  model: 2022
+};
+
+An object is a collection of key–value pairs used to store related data.
+
+Objects ARE mutable
+car.color = "blue";   // allowed
+delete car.model;    // allowed
+
+const car = ["Tata", "Toyota", "Mahindra"];
+An array is used to store a list of values in an ordered manner.
+
+Arrays ARE mutable
+car.push("Honda");     // add
+car.pop();             // remove
+car[0] = "Suzuki";     // update
+
+
+function carStart() {
+  console.log("Car Started");
+}
+
+or
+
+const carStart = () => {
+  console.log("Car Started");
+};
+
+
+A function is a block of code used to perform an action or task.
+            </code>
+        </pre>
 
     </body>
 </html>

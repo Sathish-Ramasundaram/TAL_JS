@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Change Event</h3>
+
+        <label>
+            Input:
+            <input id="changeInput" type="text" />
+            <p id="changeOutput"></p>
+        </label>
+
+        <script>
+            const changeInput = document.getElementById('changeInput');
+            const changeOutput = document.getElementById('changeOutput');
+
+            changeInput.addEventListener('change', () => {
+                console.log("Final value:", changeInput.value);
+                changeOutput.textContent = `Final value: ${changeInput.value}`;
+            });
+
+            
+        </script>
+
+
+
+
+
+    </body>
+</html>

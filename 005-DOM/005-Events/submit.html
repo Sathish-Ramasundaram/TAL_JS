@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Submit Event</h3>
+
+        <form id="myForm">
+            <input type="text" placeholder="Enter your name..">
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            const myForm = document.getElementById('myForm');
+
+            myForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent from refreshing the page
+                alert('Form has been submitted!');
+            });
+        </script>
+
+    </body>
+</html>
